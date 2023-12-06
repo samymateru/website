@@ -1,5 +1,6 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
-.container {
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+.container{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -8,7 +9,7 @@
   overflow: hidden;
 }
 
-.box {
+.box{
   position: fixed;
   top: 50px;
   left: 50px;
@@ -20,36 +21,35 @@
   justify-content: space-around;
 }
 
-.burger {
+.burger{
   height: 10%;
   width: 100%;
   background: #000000;
 }
 
-.circle {
-  -webkit-clip-path: circle(50%);
-          clip-path: circle(50%);
+.circle{
+  clip-path: circle(50%);
   background: #212121;
   width: 0;
   height: 0;
 }
 
-.menu_container {
+.menu_container{
   position: absolute;
   display: none;
 }
 
-.menu {
+.menu{
   list-style: none;
 }
 
-.list_item {
+.list_item{
   position: relative;
   padding: 20px 15px;
   margin: 40px 15px;
   font-size: 35px;
   letter-spacing: 12px;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   cursor: pointer;
   color: #ffffff;
   text-align: center;
@@ -57,12 +57,12 @@
   opacity: 0;
 }
 
-.list_item a {
-  text-decoration: none;
-  color: white;
+.list_item a{
+    text-decoration: none;
+    color: white;
 }
 
-.list_item::before {
+.list_item::before{
   content: " ";
   display: block;
   position: absolute;
@@ -74,11 +74,11 @@
   transition: 0.3s;
 }
 
-.list_item:hover::before {
+.list_item:hover::before{
   width: 50%;
 }
 
-.list_item::after {
+.list_item::after{
   content: "";
   display: block;
   position: absolute;
@@ -89,11 +89,11 @@
   transition: 0.3s;
 }
 
-.list_item:hover::after {
+.list_item:hover::after{
   width: 50%;
-}
+} 
 
-.close {
+.close{
   width: 30px;
   height: 30px;
   position: fixed;
@@ -107,17 +107,17 @@
   cursor: pointer;
 }
 
-.cross {
+.cross{
   position: absolute;
   width: 100%;
   height: 10%;
   background: #ffffff;
 }
 
-.cross1 {
+.cross1{
   transform: rotate(45deg);
 }
 
-.cross2 {
+.cross2{
   transform: rotate(-45deg);
-}/*# sourceMappingURL=styles.css.map */
+}

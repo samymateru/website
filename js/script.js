@@ -1,3 +1,4 @@
+//--------------------> Navabar section <---------------
 let box = document.querySelector(".box");
 
 let close = document.querySelector(".close");
@@ -17,4 +18,5 @@ box.addEventListener("click", () => {
 
 close.addEventListener("click", () => {
   t1.reverse();
-})
+});
+//--------------------> Navabar section <---------------

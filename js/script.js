@@ -3,6 +3,8 @@ let box = document.querySelector(".box");
 
 let close = document.querySelector(".close");
 
+let linkClosing = document.querySelectorAll(".list_item");
+
 let t1 = gsap.timeline({paused: true});
 
 t1
@@ -19,4 +21,10 @@ box.addEventListener("click", () => {
 close.addEventListener("click", () => {
   t1.reverse();
 });
+
+linkClosing.forEach(link => {
+  link.addEventListener("click", () => {
+    t1.reverse();
+  })
+})
 //--------------------> Navabar section <---------------

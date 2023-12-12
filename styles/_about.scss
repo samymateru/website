@@ -1,0 +1,25 @@
+.about-wrapper{
+    display: flex;
+    flex-direction: column;
+    padding-block: 5rem;
+    background-color: black;
+    gap: 3rem;
+}
+
+.about-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h1{
+        font-size: max(2.225rem,min(4.56634vw + 1.32039rem,4rem));
+        font-family: monospace;
+        color: whitesmoke;
+    }
+
+    p{
+        font-size: max(.875rem,min(.647249vw + .723301rem,1.5rem));
+        color: whitesmoke;
+        width: min(100% - 3rem, 80ch);
+    }
+}

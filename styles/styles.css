@@ -1,9 +1,15 @@
+header {
+  overflow: hidden;
+}
+
 .header-wrapper {
   background-image: url("../assets/background.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 100svh;
+  background-color: black;
+  overflow: hidden;
 }
 .header-wrapper nav {
   position: fixed;
@@ -42,7 +48,7 @@
   background-color: rgba(1, 1, 1, 0.3);
 }
 .header-content h1 {
-  font-size: clamp(1.5rem, 4vw, 3rem);
+  font-size: clamp(1.5rem, 4vw, 5rem);
   font-weight: bolder;
   font-family: "Times New Roman", Times, serif;
   color: rgb(248, 248, 248);
@@ -66,14 +72,17 @@
   text-transform: uppercase;
   font-weight: bold;
   position: relative;
+  width: -moz-max-content;
+  width: max-content;
+  margin: 0 auto;
 }
 .service .service-title::before {
   position: absolute;
   content: "";
-  width: 10%;
+  width: 50%;
   height: 10px;
   background-color: red;
-  bottom: 12px;
+  bottom: 8px;
 }
 
 .services {
@@ -89,6 +98,12 @@
   flex-direction: column;
   transition: all 200ms cubic-bezier(0.39, 0.575, 0.565, 1);
   padding: 1rem;
+}
+.service-content b {
+  color: rgb(251, 251, 251);
+  font-weight: bolder;
+  font-family: cursive;
+  border-bottom: 1px solid rgb(38, 38, 38);
 }
 .service-content:hover {
   background-color: rgb(46, 46, 38);
@@ -144,4 +159,28 @@
   border: 10px solid transparent;
   border-left-color: rgb(255, 0, 0);
   left: -4px;
+}
+
+.about-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding-block: 5rem;
+  background-color: black;
+  gap: 3rem;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.about-content h1 {
+  font-size: max(2.225rem, min(4.56634vw + 1.32039rem, 4rem));
+  font-family: monospace;
+  color: whitesmoke;
+}
+.about-content p {
+  font-size: max(0.875rem, min(0.647249vw + 0.723301rem, 1.5rem));
+  color: whitesmoke;
+  width: min(100% - 3rem, 80ch);
 }/*# sourceMappingURL=styles.css.map */

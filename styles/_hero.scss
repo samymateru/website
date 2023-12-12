@@ -1,9 +1,15 @@
+header{
+    overflow: hidden;
+}
+
 .header-wrapper{
     background-image: url("../assets/background.jpg");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 100svh;
+    background-color: black;
+    overflow: hidden;
 
 
 
@@ -51,7 +57,7 @@
     
 
     h1{
-        font-size: clamp(1.5rem, 4vw, 3rem);
+        font-size: clamp(1.5rem, 4vw, 5rem);
         font-weight: bolder;
         font-family: 'Times New Roman', Times, serif;
         color: rgb(248, 248, 248);

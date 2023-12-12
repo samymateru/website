@@ -4,7 +4,7 @@
         letter-spacing: 5px;
         color: whitesmoke;
         font-family: monospace;
-        font-size: clamp(1.2rem, 4vw, 3rem);
+        font-size: max(2rem, min(3.6634vw + 1.32039rem, 3.4rem));
         text-align: center;
         padding-block: 1rem;
         text-transform: uppercase;

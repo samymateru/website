@@ -1,0 +1,61 @@
+.clients-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    background-color: black;
+    h1{
+        color: whitesmoke;
+        text-align: center;
+        font-size: max(2rem, min(3.6634vw + 1.32039rem, 3.4rem));
+        font-family: monospace;
+        position: relative;
+        width: max-content;
+        margin: 0 auto;
+        overflow: hidden;
+        padding-block: 1rem;
+        &::before{
+            content: "";
+            position: absolute;
+            height: 10px;
+            width: 50%;
+            background-color: red;
+            bottom: 0.5rem;
+        }
+    }
+    
+   
+}
+
+.clients-content{
+    display: flex;
+    gap: 2rem;
+    width: max-content;
+    overflow-x: scroll;
+    padding: 3rem;
+    max-height: 90vh;
+
+    
+}
+
+.client-group{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+    flex-grow: 0;
+    flex-shrink: 0;
+    padding: 2rem;
+    background-color: black;
+    height: max-content;
+    img{
+        width: 250px;
+        aspect-ratio: 16 / 9;
+        
+    }
+
+    h2{
+        color: whitesmoke;
+        text-align: center;
+        font-family: cursive;
+    }
+}
+

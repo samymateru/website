@@ -28,7 +28,9 @@ html:hover {
 
 
 
-
+.projects{
+  min-height: 100svh;
+}
 
 
 

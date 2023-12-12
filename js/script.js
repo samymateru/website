@@ -1,4 +1,4 @@
-const lenis = new Lenis()
+const lenis = new Lenis();
 
 lenis.on('scroll', (e) => {
   
@@ -12,12 +12,32 @@ function raf(time) {
 requestAnimationFrame(raf);
 
 
-const timeline = gsap.timeline();
-console.log(timeline)
 
-timeline.from(".header-wrapper", {
-    transformOrigin: "left",
-    scale: 0.5,
-    ease: "elastic.out(1,0.3)",
-    duration: 4
+
+
+
+const scroller = document.querySelector(".clients-content");
+
+
+function getScrollAmount(){
+    const amountToScroll  = scroller.offsetWidth - window.innerWidth;
+    return -1 * amountToScroll;
+
+}
+
+const tween = gsap.to(scroller, {
+    x : getScrollAmount,
+    duration: 2,
+    ease: "none"
+});
+
+ScrollTrigger.create({
+    trigger: ".clients-wrapper",
+    start: "top 10%",
+    end: () => `+=${getScrollAmount() * -1}`,
+    invalidateOnRefresh: true,
+    animation: tween,
+    scrub: 1.5,
+    pin: true
 })
+console.log(amountToScroll)

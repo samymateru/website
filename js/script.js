@@ -1,21 +1,3 @@
-const lenis = new Lenis();
-
-lenis.on('scroll', (e) => {
-  
-})
-
-function raf(time) {
-  lenis.raf(time)
-  requestAnimationFrame(raf)
-}
-
-requestAnimationFrame(raf);
-
-
-
-
-
-
 const scroller = document.querySelector(".clients-content");
 
 
@@ -40,4 +22,33 @@ ScrollTrigger.create({
     scrub: 1.5,
     pin: true
 })
-console.log(amountToScroll)
+
+
+
+
+
+const modalOpenBtns = document.querySelectorAll(".modal-open");
+const modalCloseBtns = document.querySelectorAll(".modal-close");
+const body = document.querySelector("body");
+
+modalOpenBtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    let modal = btn.getAttribute("data-modal");
+    document.getElementById(modal).style.display = "block";
+    body.classList.add("prevent-background-scroll");
+  });
+});
+
+modalCloseBtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    let modal = (btn.closest(".modal").style.display = "none");
+    body.classList.remove("prevent-background-scroll");
+  });
+});
+
+document.addEventListener("click", (e) => {
+  if (e.target.classList.contains("modal")) {
+    e.target.style.display = "none";
+    body.classList.remove("prevent-background-scroll");
+  }
+});
